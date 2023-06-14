@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>  
+  *{ 
+    font-family:Plus Jakarta Sans; 
+    
+  }
+  /* - Red: hsl(1, 90%, 64%)
+- Blue: hsl(219, 85%, 26%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Very light grayish blue: hsl(210, 60%, 98%)
+- Light grayish blue 1: hsl(211, 68%, 94%)
+- Light grayish blue 2: hsl(205, 33%, 90%)
+- Grayish blue: hsl(219, 14%, 63%)
+- Dark grayish blue: hsl(219, 12%, 42%)
+- Very dark blue: hsl(224, 21%, 14%) */ 
+body{  
+  height:100vh;
+  display:flex; 
+  justify-content:center; 
+  align-items: center; 
+  background-color:hsl(210, 60%, 98%);   ;
+} 
+.notifications{    
+ 
+  padding:15px 35px 35px 35px;
+  background-color: white;
+  width:600px; 
+  box-shadow:10px 10px 10px rgb(245, 239, 239),-10px -10px 10px rgb(245, 239, 239);
+}
+ 
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }   
+    .people{ 
+      display:grid;
+      grid-template-rows:1fr; 
+      row-gap:15px; 
+      font-size:15px;
+    }
+    .profile-photo{   
+      height:40px; 
+      width:40px;
+    }
+    .profile{ 
+      display:grid; 
+      grid-template-columns:50px 1fr;  
+      column-gap:10px;
+      background-color:hsl(210, 60%, 98%);  
+      align-items: center;
+      height:60px; 
+      
+    }  
+    .profile1{ 
+      display:grid; 
+      grid-template-columns:50px 1fr;  
+      column-gap:10px;
+    }
+    .notification{ 
+      position:relative; 
+   
+    } 
+    .title{ 
+        display:flex; 
+        justify-content: space-between; 
+        align-items: center;
+    } 
+    .notify{ 
+      display:flex; 
+      column-gap:15px; 
+      align-items: center;
+    } 
+    span{ 
+      color: hsl(219, 85%, 26%); 
+      font-weight:bold; 
+      cursor:pointer;
+    }   
+    strong{ 
+      cursor:pointer;
+    }
+    strong:hover{ 
+      color:hsl(219, 85%, 26%); ;
+    }
+    .circle{ 
+      position:absolute; 
+      height:7px; 
+      width:7px; 
+
+      right:30px; 
+      top:7px; 
+      border-radius:50%; 
+      background-color:hsl(1, 90%, 64%);
+    } 
+    p{ 
+      cursor:pointer;
+    } 
+    p:hover{ 
+      background-color: hsl(211, 68%, 94%);   
+    
+    } 
+    .mark{ 
+      cursor:pointer;
+    } 
+    .mark:hover{ 
+      color: hsl(219, 85%, 26%);
+    } 
+    .Span_un{ 
+      cursor:pointer; 
+      color:  hsl(219, 12%, 42%);font-weight:bold;
+    } 
+    .Span_un:hover{ 
+      color:hsl(219, 85%, 26%); 
+    } 
+
+  </style>
+</head>
+<body> 
+    <div class="notifications">  
+      <div class="title">  
+        <div class="notify"> 
+          <h3>Notifications</h3> 
+           <p 
+           style="background-color: hsl(219, 85%, 26%);color:white;height:20px;width:20px;text-align: center;border-radius:5px;">
+           3
+          </p>
+        </div> 
+
+        <div class="mark"> 
+          mark all as read
+        </div>
+
+    
+      </div>
+      <div class="people">  
+
+        <div class="profile"> 
+            <div style="margin-left:10px;"> 
+              <img class="profile-photo"alt="profile photo"src="avatar-mark-webber.webp"> 
+            </div> 
+            <div class="notification"> 
+              <strong>Mark Webber</strong> reacted to your recent post <span class="Span_un">My first tournament today!</span>
+              <br>
+              <span style="color: hsl(219, 14%, 63%); font-weight: 400;"> 1m ago  </span> 
+              <div class="circle"></div>
+            </div> 
+            
+        </div> 
+  
+  
+        <div class="profile"> 
+          <div style="margin-left:10px;"> 
+            <img class="profile-photo"alt="profile photo"src="avatar-angela-gray.webp"> 
+          </div> 
+          <div class="notification"> 
+            <strong>Angela Gray</strong> followed you<br> 
+            <span style="color: hsl(219, 14%, 63%); font-weight: 400;"> 5m ago</span> 
+            <div class="circle" style="right:340px;"></div>
+          </div> 
+          
+      </div> 
+  
+  
+      <div class="profile"> 
+        <div style="margin-left:10px;"> 
+          <img class="profile-photo"alt="profile photo"src="avatar-jacob-thompson.webp"> 
+        </div> 
+        <div class="notification"> 
+          <strong>Jacob Thompson</strong> has joined your group <span>Chess Club</span><br> 
+          <span style="color: hsl(219, 14%, 63%); font-weight: 400;">1 day ago</span> 
+          <div class="circle" style="right:165px;"></div>
+          </div>
+    </div> 
+  
+  
+    <div class="profile1"> 
+      <div style="margin-left:10px;"> 
+        <img class="profile-photo"alt="profile photo"src="avatar-rizky-hasanuddin.webp"> 
+      </div> 
+      <div class="notification"> 
+        <strong>Rizky Hasanuddin</strong> sent you a private message<br> 
+        <span style="color: hsl(219, 14%, 63%); font-weight: 400;"> 5 days ago</span>
+        <p 
+        style="width:500px;border:1px solid hsl(210, 5%, 85%);padding:12px;">  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+          I'm already having lots of fun and improving my game.</p>
+      </div> 
+      
+  </div> 
+  
+  
+  <div class="profile1"> 
+    <div style="margin-left:10px;"> 
+      <img class="profile-photo"alt="profile photo"src="avatar-kimberly-smith.webp"> 
+    </div> 
+    <div class="notification"> 
+  
+      <strong>Kimberly Smith</strong> commented on your picture<br> 
+      <span style="color: hsl(219, 14%, 63%); font-weight: 400;"> 1 week ago </span>
+      <div style="display:inline-block;position:absolute;right:0px;top:0px;"> 
+        <img style="width:40px;height:40px;"src="image-chess.webp">
+      </div>
+    </div>
+  </div> 
+  
+  
+  <div class="profile1"> 
+    <div style="margin-left:10px;"> 
+      <img class="profile-photo"alt="profile photo"src="avatar-Nathan-Peterson.webp"> 
+    </div> 
+    <div class="notification"> 
+      <strong>Nathan Peterson</strong> reacted to your recent post <span class="Span_un">5 end-game strategies to increase your win rate</span><br> 
+      <span style="color: hsl(219, 14%, 63%); font-weight: 400;"> 2 weeks ago </span>
+    </div>
+  </div> 
+  
+  
+  <div class="profile1"> 
+    <div style="margin-left:10px;"> 
+      <img class="profile-photo"alt="profile photo"src="avatar-anna-kim.webp"> 
+    </div> 
+    <div class="notification"> 
+   
+      <strong>Anna Kim</strong> left the group <span>Chess Club</span><br> 
+      <span style="color: hsl(219, 14%, 63%); font-weight: 400;"> 2 weeks ago </span>
+    </div>
+  </div> 
+  
+  </div> 
+
+   
+    </div>
+  
+
+</body>
+</html>
